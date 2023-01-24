@@ -38,18 +38,24 @@ export class AppComponent implements OnInit {
   }
 
   previousMonthClick(event: any) {
-    this.lastEvent.date = event;
-    this.lastEvent.source = 'Previous Month is clicked';
+    this.lastEvent = {
+      date: event,
+      source: 'Previous Month is clicked'
+    };
   }
 
   nextMonthClick(event: any) {
-    this.lastEvent.date = event;
-    this.lastEvent.source = 'Next Month is clicked';
+    this.lastEvent = {
+      date: event,
+      source: 'Next Month is clicked'
+    };
   }
 
   monthSelect(event: any) {
-    this.lastEvent.date = event;
-    this.lastEvent.source = 'Month is selected';
+    this.lastEvent = {
+      date: event,
+      source: 'Month is selected'
+    };
   }
 
 }
