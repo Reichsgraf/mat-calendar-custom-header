@@ -1,0 +1,22 @@
+<div class="mat-calendar-header">
+  <div class="mat-calendar-controls">
+    <button mat-button type="button" class="mat-calendar-period-button"
+            (click)="currentPeriodClicked()" cdkAriaLive="polite">
+      {{label | date:'MMMM yyyy'}}
+    </button>
+
+    <div class="mat-calendar-spacer"></div>
+
+    <ng-content></ng-content>
+
+    <ng-container *ngIf="isMonthView">
+      <button mat-icon-button type="button" class="mat-calendar-previous-button"
+              (click)="previousClicked()">
+      </button>
+
+      <button mat-icon-button type="button" class="mat-calendar-next-button"
+              (click)="nextClicked()">
+      </button>
+    </ng-container>
+  </div>
+</div>

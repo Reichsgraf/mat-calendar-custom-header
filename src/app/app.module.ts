@@ -1,16 +1,22 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MAT_DATE_LOCALE, MatNativeDateModule} from "@angular/material/core";
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    {provide: MAT_DATE_LOCALE, useValue: 'en-GB'},
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
