@@ -30,7 +30,7 @@
                   (selectedChange)="dateControl.setValue($event)">
     </mat-calendar>
 
-    <div class="card-console">
+    <div class="card card-console">
       <span>Last event fired by: {{(lastEvent.source) || '-'}}</span>
 
       <span>Last event data is: {{(lastEvent.date | date:'MMMM d, y, H:mm') || '-'}}</span>

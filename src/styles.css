@@ -8,3 +8,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   justify-content: center;
   align-items: center;
 }
+
+.mat-calendar-body-active .mat-calendar-body-cell-content {
+  background-color: white !important;
+}
