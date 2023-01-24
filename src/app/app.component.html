@@ -26,6 +26,7 @@
 
     <mat-calendar [headerComponent]="calendarHeader"
                   (monthSelected)="monthSelect($event)"
+                  (yearSelected)="yearSelect($event)"
                   (selectedChange)="dateControl.setValue($event)">
     </mat-calendar>
 
